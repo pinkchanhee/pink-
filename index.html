@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--브라우저를 최신 엔진으로 사용합니다-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--다양한 기기에서 위치를 적절하게 표시합니다-->
+    <title>계산기 만들기</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <!--계산기 전체를 포함하는 컨테이너역활 입니다-->
+        <div class="display">0</div> 
+        <div class="buttons">
+            <!--class 는 css나 자바스크립트에 해당 요소에
+            스타일을 적용하거나 특정 기능을 부여할수 있게해준다
+            name 과의 차이점은 name은 주로 데이터식별을 위해
+            사용한다 즉 스타일시트쪽으로는 잘 안쓰인다
+            그리고 class는 여러개를 동일하게 선택할수있는 반면
+            name은 하나만 선택을 할수 있다 -->
+            <button class="button function">C</button>
+            <button class="button function">±</button>
+            <button class="button function">%</button>
+            <button class="button operator">/</button>
+            <button class="button number">7</button>
+            <button class="button number">8</button>
+            <button class="button number">9</button>
+            <button class="button operator">*</button>
+            <button class="button number">4</button>
+            <button class="button number">5</button>
+            <button class="button number">6</button>
+            <button class="button operator">-</button>
+            <button class="button number">1</button>
+            <button class="button number">2</button>
+            <button class="button number">3</button>
+            <button class="button operator">+</button>
+            <button class="button number zero">0</button>
+            <button class="button number">.</button>
+            <button class="button operator">=</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

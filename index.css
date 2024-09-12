@@ -1,0 +1,89 @@
+/* 1. 전체 크기 o
+/* 3. 디스플레이 크기 o
+/* 2. 컨테이너 스타일 < 이거먼저 2 o
+/* 4. 버튼 스타일 o */ 
+body, html{
+    margin: 0; /* 기본 여백을 0으로 설정합니다*/
+    padding: 0; /* 기본 패딩 0으로 설정합니다*/
+    height: 100%; /*높이를 100%으로 설정합니다*/
+    display: flex; /*플렉스 박스를 사용해 레이아웃을 만듭니다*/
+    justify-content: center; /*가로로 가운데 정렬합니다*/
+    align-items: center; /*세로로 가운데 정렬합니다*/
+}
+.calculator-container{
+    width: 300px; /*컨테이너 너비를 300px로 설정합니다*/
+    border: 2px solid pink; /*두께가 2px이고 색상이 핑크인 테두리를 설정합니다*/
+    padding: 10px; /*내부 여백을 10px로 설정합니다*/
+    display: flex; /*컨테이너를 플렉스 박스로 만듭니다*/
+    flex-direction: column; /*플렉스 방향을 세로로 설정합니다*/
+    background-color: pink /*배경색을 핑크로 설정합니다*/
+}
+.display{
+    height: 50px; /*높이를 50px로 설정합니다*/
+    margin-bottom: 8px; /*아래쪽 여백을 8px로 설정합니다*/
+    background-color: rgb(255, 255, 255); /*배경색을 흰색으로 설정합니다*/
+    border: 2px solid rgb(0, 0, 0); /*두께가 2px이고 색상이 검정색인 테두리를 설정합니다*/
+    display: flex; /*플렉스 박스를 사용해 레이아웃을 설정합니다*/
+    justify-content: flex-end; /*내용물을 오른쪽 끝으로 정렬합니다*/
+    align-items: center; /*내용물을 수직 가운데 정렬합니다*/
+    padding-right: 8px; /*오른쪽 패딩을 8px로 설정합니다*/
+    font-size: 30px; /*글자 크기를 30px로 설정합니다*/
+    
+}
+.buttons {
+    border: 2px solid pink; /*두께가 2px이고 색상이 핑크인 테두리를 설정합니다*/
+    display: flex; /*플렉스 박스를 사용합니다*/
+    flex-wrap: wrap; /*버튼들이 여러줄로 감싸져 배치되도록 설정합니다*/
+    gap: 6px; /*버튼들 사이에 6px간격을 둡니다*/
+    /*gap 이란? 플렉스박스나 그리드 레이아웃에서 자식요소들 간의 간격을 설정하는 속성*/
+    justify-content: space-between; /*버튼들 사이의 공간(여백o)을 균등하게 나눕니다*/
+    /*space-around 자식 요소들 사이에 균등한 간격을 두되 시작점과 끝(여백x) 기준으로 간격둔다*/
+    /*space-evenly 자식 요소들 사이의 간격이 모두 동일하도록 설정한다*/
+}
+.button {
+    width: 23%; /*버튼의 너비를 컨테이너의 23%로 설정합니다*/
+    height: 50px; /*버튼의 높이를 50px로 설정합니다*/
+    border: 1px solid pink; /*두께가 1px이고 색상이 핑크인 테두리를 설정합니다*/
+    background-color: pink; /*버튼의 배경색을 핑크로 설정합니다*/
+    font-size: 15px; /*글자 크기를 15픽셀로 설정합니다*/
+    cursor: pointer; /*버튼 위에 마우스를 올리면 커서가 손가락 모양으로 바뀌도록 설정합니다*/
+    display: flex; /*플렉스 박스를 사용해 레이아웃을 설정합니다*/
+    justify-content: center; /*내용물을 가로로 가운데 정렬합니다*/
+    align-items: center; /*내용물을 세로로 가운데 정렬합니다*/
+    border-radius: 4px; /*테투리의 모서리를 둥글게 설정합니다*/
+}
+.button.zero { /* 0 버튼만의 스타일입니다*/
+    width: 48%;
+}
+.button:hover{ /*버튼에 마우스를 올렷을때 색이변합니다*/
+    background-color: rgb(242, 156, 156);
+}
+.button:active{ /*버튼을 클릭 했을때 색이 변합니다*/
+    background-color: rgb(254, 107, 107);
+}
+/* display: flex;와 플렉스 박스의 기본 원리: 플렉스 박스를 사용하면 
+부모 요소의 자식 요소들이 유연하게 배치됩니다.
+ 이때 가로세로 정렬, 배치 방향, 간격 조절 등이 용이합니다.
+
+justify-content: center;와 align-items: center;의 차이: 
+justify-content는 가로 정렬, align-items는 세로 정렬을 제어합니다.
+
+gap 속성의 역할: 플렉스 박스나 그리드 레이아웃에서 요소들 사이의 간격을 설정하는데 사용됩니다.
+
+border-radius의 적용: 버튼의 모서리를 둥글게 만드는 효과입니다.
+
+.button.zero와 같은 특정 요소에만 스타일을 적용하는 방법: 
+이 클래스는 0 버튼의 너비를 다른 버튼보다 넓게 설정합니다. */
+
+/* 플렉스 박스와 레이아웃의 차이점
+플렉스박스 : 주로 한 방향에 대한 요소 배치에 강하다
+그리드 레이아웃 : 두방향 모두 사용해 복잡한 레이아웃을 구현할수있다
+ 
+즉 플렉스 박스는 간단한 레이아웃이나 요소들의 정렬이 필요할때 적합하다
+그리드는 복잡한 페이지 구조를 필요로 하는 경우에 더 적합하다
+ 
+결론으로 플렉스박스는 단일 행 또는 정렬과 배치에 강점을 가진 반면 ,  그리드 레이아웃은
+복잡한 2차원 레이아웃을 보다 명확하게 구성할수 있다
+ 
+플렉스 박스 : 1차원
+그리드 레이아웃 : 2차원 */
